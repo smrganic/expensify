@@ -8,7 +8,9 @@
     "build:dev": "webpack",
     "build:p": "webpack --env production",
     "dev-server": "webpack serve",
-    "serve": "live-server public/"
+    "serve": "live-server public/",
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:p"
   },
   "dependencies": {
     "@babel/cli": "^7.12.10",
@@ -20,6 +22,7 @@
     "babel-loader": "^8.2.2",
     "cli": "^1.0.1",
     "css-loader": "^5.0.1",
+    "express": "^4.17.1",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^1.3.4",
     "moment": "^2.29.1",
