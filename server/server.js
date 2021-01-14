@@ -8,9 +8,9 @@ app.use(express.static(publicPath))
 
 // This should serve index.html for every 404 error
 
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(publicPath, "index.html"))
-// })
+app.get("*", (req, res) => {
+    res.sendFile(path.join(publicPath, "index.html"))
+})
 
 app.listen(port, () => {
     console.log("Sever is up")
