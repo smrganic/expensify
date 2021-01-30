@@ -1,5 +1,6 @@
 import { addExpense, editExpense, removeExpense } from "../../../redux/actions/expenses"
 
+// Expand on this to return an array of expenses
 const setupTestData = () => {
     const testExpense = {
         description: "Rent",
