@@ -1,2 +1,4 @@
 node_modules/
 public/dist/
+debug.log
+yarn-error.log

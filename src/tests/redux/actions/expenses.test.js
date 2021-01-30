@@ -1,4 +1,4 @@
-import { addExpense, editExpense, removeExpense } from "../../redux/actions/expenses"
+import { addExpense, editExpense, removeExpense } from "../../../redux/actions/expenses"
 
 const setupTestData = () => {
     const testExpense = {
