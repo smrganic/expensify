@@ -10,7 +10,8 @@
     "dev-server": "webpack serve",
     "serve": "live-server public/",
     "start": "node server/server.js",
-    "heroku-postbuild": "yarn run build:p"
+    "heroku-postbuild": "yarn run build:p",
+    "test": "jest"
   },
   "dependencies": {
     "@babel/cli": "^7.12.10",
@@ -42,6 +43,7 @@
     "webpack": "^5.11.1"
   },
   "devDependencies": {
+    "jest": "^26.6.3",
     "live-server": "^1.2.1",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.1"
