@@ -42,6 +42,6 @@ test("Should set startDate filter.", () => {
 
 test("Should set endDate filter.", () => {
     const endDate = moment().endOf("day")
-    const state = filtersReducer(undefined, { type: "SET_START_DATE", endDate })
+    const state = filtersReducer(undefined, { type: "SET_END_DATE", endDate })
     expect(state.endDate).toEqual(endDate)
 })

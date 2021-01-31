@@ -5,8 +5,7 @@ import AppRouter from "./routers/AppRouter"
 import configureStore from "./redux/store/configureStore"
 import "normalize.css"
 import "./styles/style.scss"
-
-
+import "react-dates/lib/css/_datepicker.css"
 
 const store = configureStore()
 
