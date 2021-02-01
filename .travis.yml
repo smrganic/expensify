@@ -1,11 +1,16 @@
 language: node_js
-
 node_js:
-  - 15
-
+- 15
 before_install:
-  - yarn install
-
+- yarn install
 script:
-  - yarn test
-  - yarn run build:p
+- yarn test
+- yarn run build:p
+branches:
+  only:
+  - main
+deploy:
+  provider: heroku
+  app: expensify
+  api_key:
+    secure: LhShS19vYoKlDjR2lz50d99O/MhJa7O9wuukGlPthm9Qp+DBfFAjwGrfaIQGlfmMQksDZ+hGM2aMPuBY8gWxKfKKVK+0RmQnkz3ylhQG/vql4kO7vHn62d8v4/DCqWgtQ/iZMd+sSnkLJLUHzY5hj9WE8VMnkt2ZLd+pfCwlyfuA7xYVfy8YGiS3q++2SgFjqxzRA0GbXRa/ZmoFsDLbfhpt9/xGOhgObkBW9rEUSK+eBylne5FeKHfehn1AEVwL1HOCIuO5OZJykGXMksrX76khnPWBAKocP9Uevj/Gle7Gd+U9sajPNpwxlr5NVl2cs3ih9mqRpbHZcB21lVMkUx9zBc/4eifiydxvO1THYHJHF7JvoiZ++McORc8xbx7dMuoqDcdZzZlGN+2O9fXU/fIovpeaZdeesSPxV6XWnRem/fqnKhsGCFX/1PM++/3/vmHQJeUDdn8+Rou2WqSlD7Rbi+NL//S/EreLi1OV9TWmN19oTiBwVvfWG8N+kTlSsmYJuUG2iv5UMljwPM1KY7sJPJAyAaEdDx0N9DvOpgoO4+Lu/V+8j12zzalFKqstyIQmed4i2YcedPHdoZO7VUV7caM83kfwjh68v7UnT/JZY/tvDgqqy0u4MBc6I5iIn9jrHq1ILUtHAbB1r5kwgn9iLVwMMAWs49kb5M7i31M=
