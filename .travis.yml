@@ -1,0 +1,11 @@
+language: node_js
+
+node_js:
+  - 15
+
+before_install:
+  - yarn install
+
+script:
+  - yarn test
+  - yarn run build:p
