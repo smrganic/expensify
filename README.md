@@ -78,7 +78,7 @@ The test suite calls beforeEach() function before every test run so tests are in
 
 The first test captures the whole AddExpensePage element in a [snapshot](https://jestjs.io/docs/en/snapshot-testing) and compares it to the previous one for changes. This test looks for unexpected UI changes. It passes if there is no changes and fails if the rendered output changed.
 
-The second test finds the ExpenseForm child component within AddExpensePage, passes some mock data to it using props and calls the onSubmit callback. The [assertion](https://jestjs.io/docs/en/expect#tohavebeenlastcalledwitharg1-arg2-) checkes if the correct function has been called with the correct data after the callback.
+The second test finds the ExpenseForm child component within AddExpensePage, passes some mock data to it using props and calls the onSubmit callback. The [assertion](https://jestjs.io/docs/en/expect#tohavebeenlastcalledwitharg1-arg2-) checks if the correct function has been called with the correct data after the callback.
 
 ```javascript
 import React from "react"
@@ -112,7 +112,36 @@ yarn test
 ```
 Expected output from the test suite.
 
-![test-suite-output-image](https://raw.githubusercontent.com/smrganic/expensify/main/public/images/test-suite.png "Test suite")
+```
+$ yarn test
+yarn run v1.22.4
+$ jest --config=jest.config.json
+PASS src/tests/components/ExpenseForm.test.js
+PASS src/tests/components/ExpenseListFilters.test.js
+PASS src/tests/redux/reducers/expenses.test.js
+PASS src/tests/redux/actions/expenses.test.js
+PASS src/tests/redux/selectors/expenses.test.js
+PASS src/tests/redux/reducers/filters.test.js
+PASS src/tests/redux/actions/filters.test.js
+PASS src/tests/components/EditExpensePage.test.js
+PASS src/tests/components/AddExpensePage.test.js
+PASS src/tests/components/ExpensesSummary.test.js
+PASS src/tests/redux/selectors/expenses-total.test.js
+PASS src/tests/components/ExpenseList.test.js
+PASS src/tests/components/ExpenseListItem.test.js
+PASS src/tests/components/ExpenseDashboardPage.test.js
+PASS src/tests/components/NotFoundPage.test.js
+PASS src/tests/components/Header.test.js
+PASS src/tests/components/HelpPage.test.js
+Test Suites: 17 passed, 17 total
+Tests:       61 passed, 61 total
+Snapshots:   17 passed, 17 total
+Time:        5.779 s
+Ran all test suites.
+Done in 6.41s.
+The command "yarn test" exited with 0.
+```
+
 
 ## Travis CI - Heroku integration
 
@@ -144,7 +173,7 @@ branches:
 
 When installed and logged in to both CLIs, encrypt and add the Heroku authenticaton token to the .travis.yml (Use PowerShell for this).
 ```
-travis encrypt $(heroku auth:token) --add deploy.api_key
+travis encrypt --pro $(heroku auth:token) --add deploy.api_key
 ```
 Enable automatic deploys on Heroku and check the *Wait for CI to pass before deploy* option. Now after every push to the main branch there will be a new deployed version on Heroku.
 
