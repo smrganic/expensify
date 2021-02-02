@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - 15
 before_install:
-- yarn install
+- sudo apt-get install -y -qq yarn=1.22.10
 script:
 - yarn test
 - yarn run build:p
